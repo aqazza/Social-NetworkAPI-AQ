@@ -60,12 +60,13 @@ router.delete("/:thoughtId", (req, res) => {
 });
 
 //TODO: ROUTE TO ADD REACTION TO A THOUGHT
+
 router.post("/:thoughtId/reactions", (req, res) => {
   Reaction.create(req.body)
     .then(({ _id }) => {
       return Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $push: { reactions: _id } },
+        { $addToSet: { reactions: req.body } },
         { new: true }
       );
     })
