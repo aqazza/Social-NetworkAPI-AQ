@@ -62,22 +62,22 @@ router.delete("/:thoughtId", (req, res) => {
 //TODO: ROUTE TO ADD REACTION TO A THOUGHT
 
 router.post("/:thoughtId/reactions", (req, res) => {
-  Reaction.create(req.body)
-    .then(({ _id }) => {
-      return Thought.findOneAndUpdate(
-        { _id: req.params.thoughtId },
-        { $addToSet: { reactions: req.body } },
-        { new: true }
-      );
-    })
+  Thought.findOneAndUpdate(
+    { _id: req.params.thoughtId },
+    { $addToSet: { reactions: req.body } },
+    { runValidators: true, new: true }
+  )
     .then((dbThoughtData) => {
       if (!dbThoughtData) {
-        res.status(404).json({ message: "No thought found with this id!" });
+        res.status(404).json({ message: "No thought with this ID was found" });
         return;
       }
       res.json(dbThoughtData);
     })
-    .catch((err) => res.json(err));
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
 });
 //TODO: ROUTE TO DELETE A REACTION ON A THOUGHT
 router.delete("/:thoughtId/reactions/:reactionId", (req, res) => {
