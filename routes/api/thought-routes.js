@@ -66,7 +66,7 @@ router.post("/:thoughtId/reactions", (req, res) => {
     .then(({ _id }) => {
       return Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $addToSet: { reactions: req.body } },
+        { $push: { reactions: _id } },
         { new: true }
       );
     })
