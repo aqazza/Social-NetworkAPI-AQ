@@ -66,7 +66,7 @@ router.delete("/:userId", (req, res) => {
 });
 
 //TODO - ROUTE THAT ADDS A FRIEND TO A USER
-router.put("/:userId/friends/:friendId", (req, res) => {
+router.post("/:userId/friends/:friendId", (req, res) => {
   User.findOneAndUpdate(
     { _id: req.params.userId },
     { $push: { friends: req.params.friendId } },
