@@ -1,5 +1,9 @@
 # 18 NOSQL: Social Network API AQ
+Walkthrough Video & Repo Link
+---
+https://www.youtube.com/watch?v=7JcR-Vpj-ug&t=2s
 
+https://github.com/aqazza/Social-NetworkAPI-AQ
 ## Table of Contents
 
 - [Introduction](#introduction)
