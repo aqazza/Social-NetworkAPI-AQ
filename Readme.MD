@@ -10,7 +10,7 @@
 
 ## Introduction
 
----
+
 
 This is an API for a social network application. It allows users to create profiles, share thoughts, react to thoughts, and connect with other users. Users can also connect with each other by adding other users to their friends list. It provides a RESTful API that can be used by frontend developers to build a complete social network application.
 
@@ -24,7 +24,7 @@ This API is built using:
 
 ## Installation
 
----
+
 
 Clone the repository.
 
@@ -34,19 +34,19 @@ Start the server using npm start or nodemon server.js.
 
 ## Usage
 
----
+
 
 The usage of this app is to provide a platform for users to connect with each other and share their thoughts. Users can create an account, set up their profile, and then start sharing their thoughts with other users on the platform.
 
 ## Credits
 
----
+
 
 N/A
 
 ## License
 
----
+
 
 This project is licensed under the MIT License.
 
@@ -54,7 +54,7 @@ This project is licensed under the MIT License.
 
 ## Questions
 
----
+
 
 Email: anasqazza@gmail.com
 
