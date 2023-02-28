@@ -38,10 +38,9 @@ Start the server using npm start or nodemon server.js.
 
 ## Usage
 
-
-
 The usage of this app is to provide a platform for users to connect with each other and share their thoughts. Users can create an account, set up their profile, and then start sharing their thoughts with other users on the platform.
 
+![alt text](https://github.com/aqazza/Social-NetworkAPI-AQ/blob/main/Social-NetworkAPI.png?raw=true)
 ## Credits
 
 
